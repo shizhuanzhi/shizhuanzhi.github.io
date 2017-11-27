@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>前端基础</title>
+  <title>Ajax专题干货 | 前端基础</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="哈哈哈">
-<meta property="og:type" content="website">
-<meta property="og:title" content="前端基础">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="备注:下面的小练习仅供参考。 Ajax是能够在不刷新页面的情况下，让网页局部更新的技术。 使用Ajax请求数据分为三步： 1.创建对象 var xhr = new XMLHttpRequest(); 2.发送请求 xhr.open(“GET”,”hot.json(这里写与后台文件的路径)”，true)； 3.等待响应，每次网络请求的状态代表都会调用这个方法 xhr.send();//因为我们是要获">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax专题干货">
+<meta property="og:url" content="http://yoursite.com/2017/11/27/Ajax专题干货/index.html">
 <meta property="og:site_name" content="前端基础">
-<meta property="og:description" content="哈哈哈">
+<meta property="og:description" content="备注:下面的小练习仅供参考。 Ajax是能够在不刷新页面的情况下，让网页局部更新的技术。 使用Ajax请求数据分为三步： 1.创建对象 var xhr = new XMLHttpRequest(); 2.发送请求 xhr.open(“GET”,”hot.json(这里写与后台文件的路径)”，true)； 3.等待响应，每次网络请求的状态代表都会调用这个方法 xhr.send();//因为我们是要获">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-27T12:04:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端基础">
-<meta name="twitter:description" content="哈哈哈">
+<meta name="twitter:title" content="Ajax专题干货">
+<meta name="twitter:description" content="备注:下面的小练习仅供参考。 Ajax是能够在不刷新页面的情况下，让网页局部更新的技术。 使用Ajax请求数据分为三步： 1.创建对象 var xhr = new XMLHttpRequest(); 2.发送请求 xhr.open(“GET”,”hot.json(这里写与后台文件的路径)”，true)； 3.等待响应，每次网络请求的状态代表都会调用这个方法 xhr.send();//因为我们是要获">
   
     <link rel="alternate" href="/atom.xml" title="前端基础" type="application/atom+xml">
   
@@ -67,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Ajax专题干货" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Ajax专题干货" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/27/Ajax专题干货/" class="article-date">
   <time datetime="2017-11-27T11:55:56.000Z" itemprop="datePublished">2017-11-27</time>
@@ -82,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/27/Ajax专题干货/">Ajax专题干货</a>
+    <h1 class="article-title" itemprop="name">
+      Ajax专题干货
     </h1>
   
 
@@ -127,261 +126,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-jquery初识" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/27/jquery初识/" class="article-date">
-  <time datetime="2017-11-27T09:49:34.000Z" itemprop="datePublished">2017-11-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/27/jquery初识/">jquery初识</a>
-    </h1>
+    <a href="/2017/11/27/jquery初识/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jquery初识</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>什么是jquery呢？在笔者理解看来，jquery就是利用封装好的js文件，用更少的代码实现复杂的功能，其本质上就是另一种形式的原生javascript.</p>
-<p>一、在使用jquery之前，我们需要注意以下几点：</p>
-<p>1、注意：通过JQ获取到的元素是JQ对象，通过元素的document.getXXX获取到的元素是原生对象。</p>
-<p>2、 ！！！原生对象不能调用JQ的方法和属性。</p>
-<p>3、！！！JQ的对象不能调用原生的方法和属性</p>
-<p>例如： $(“.content”).innerHTML = “123”；（ 这种写法是无效的）。</p>
-<p>二、jquery对象如何转原生对象</p>
-<p>1、JQ对象[0]</p>
-<p>例如：$(“.content”)[0].innerHTML = “显示”;</p>
-<p>2、JQ对象.get(0)</p>
-<p>例如：$(“.content”).get(0).innerHTML = “显示2”;</p>
-<p>三、获取元素的多种方法</p>
-<p>1、 $(“”) 里面放字符串-选择器。</p>
-<p>$(“.item”);或者$(“input[type=radio]”);或者$(“div:not(.item)”);</p>
-<p>$(“p:first”);//first是所有标签的第一个；或者：$(“p:nth-child(1)”);等等，由于选择器很多，这里就不由于举例了，反正所有的选择器这里都适用。</p>
-<p>2、根据索引找元素，索引从0开始。</p>
-<p>odd奇数索引：$(“p:odd”).css(“color”, “red”);</p>
-<p>even偶数索引：$(“p:even”).css(“color”, “red”);</p>
-<p>eq(2) 索引值为2：$(“p:eq(2)”).css(“color”, “red”);</p>
-<p>四、创建、添加、包裹、删除元素</p>
-<p>1、创建</p>
-<p>$(“</p><p>插个P标签</p>“)//括号里的字符串直接是标签。<p></p>
-<p>2.添加</p>
-<p> p.append(span) 给p插入子级span</p>
-<p>p.appendTo(body) 把p插入body里面</p>
-<p>prepend 和 prependTo用法和append一样，不同点在于prepend是在最前面插入。</p>
-<p>.after()： content后面有一个item2</p>
-<p>$(“.content”).after($(“item2”));</p>
-<p> insertAfter 把item2插入到content之后</p>
-<p>$(“.item2”).insertAfter(“.content”);</p>
-<p>3.包裹与去掉包裹的父级</p>
-<p>①例如：给每个p标签用一个div包裹起来</p>
-<p>$(“p”).wrap(“<div></div>“);//wrap里面的参数可以使标签，也可以是函数。</p>
-<p>当参数是函数的时候：jquery会把函数的返回值作为包裹p的父级来使用，</p>
-<p>例如：</p>
-<p>②wrapAll 给所有的p加一个共同的父级，父级在第一个p的位置:</p>
-<pre><code>$(&quot;p&quot;).wrapAll(&quot;&lt;div&gt;&lt;/div&gt;&quot;);
-</code></pre><p>③给p标签的内容加个B标签：</p>
-<p>$(“p”).wrapInner(“<b></b>“);</p>
-<p>④去掉包裹的父级:</p>
-<p>$(“.content”).unwrap();</p>
-<p>4、删除元素</p>
-<p>①remove删除元素的时候同时删除事件和数据</p>
-<p>②detach删除元素的时候会保留事件和数据</p>
-<p>$(“p:nth-child(3):last”).css(“color”, “yellow”).click(function(){</p>
-<p>console.log(“123”);</p>
-<p>}).detach().appendTo(document.body);</p>
-<p>$(“p:nth-child(3):last”).css(“color”, “yellow”).click(function(){</p>
-<p>console.log(“123”);</p>
-<p>}).remove().appendTo(document.body);</p>
-<p>五、修改或者获取css样式：</p>
-<p>2、jquery属性：</p>
-<p>注意：attr一般用于获取或者设置自定义属性；</p>
-<pre><code>prop一般用于获取系统自带属性。
-
-当我们在获取src的时候，prop是绝对路径。
-
-获取系统自带的属性，可以适用prop，用attr可能获取不到。
-
-            $(&quot;:checkbox&quot;).prop(&quot;checked&quot;);
-
-            $(&quot;:checkbox&quot;).attr(&quot;checked&quot;,true);
-</code></pre><p>设置属性：</p>
-<p>六、jquery事件</p>
-<p>附加：移交$的使用权。正常情况下$就代表jQuery，如果和其他变量名有冲突，JQ可以把$的使用权移交出去，调用该方法之后，$就不在代表jQuery了。例如：</p>
-<pre><code>用变量接收返回值，以后就可以用$$来代表JQ----
-
-                  var $$ = $.noConflict();
-</code></pre><p>1、ready事件：document.ready和window.onload类似，都是文档加载完毕之后执行。不同点在于document.ready可以绑定多个事件。</p>
-<p>例如：</p>
-<p>①$(document).ready(function(){</p>
-<p>console.log(“文档加载完毕”);</p>
-<p>})</p>
-<p>②$(document).ready(function(){</p>
-<p>console.log(“文档加载完毕2”);</p>
-<p>})</p>
-<p>③// 简化版写法，最常用的写法</p>
-<p>$(function(){</p>
-<p>console.log(“文档加载完毕3”);</p>
-<p>})</p>
-<p>上述①②③都能正常执行，不存在后者覆盖前者的情况。</p>
-<p>2、事件绑定：</p>
-<p>一般情况下我们这样写：</p>
-<p>$(“div p:first-child:first”).click(function(){</p>
-<pre><code>相关语句......
-</code></pre><p> });</p>
-<p>比较正式的格式：</p>
-<pre><code>// on,绑定事件，四个参数
-
-   div.on(type,selector,obj,fn)
-
-  // type:字符串类型，放的是事件类型，如：click
-
-  // selector:字符串类型，是选择器，代表过滤，只有这个选择器内的元素才会触发事件.
-
-  // obj:对象类型，给事件传的参数
-
-  // fn: 函数，事件触发之后执行的函数
-
-  // 这里指定只有在点击span标签的时候才会触发点击事件
-
- $(&quot;div p:first-child:first&quot;).on(&quot;click&quot;,&quot;span&quot;,{name:&quot;月&quot;,age:18},function(ev){
-
-                  console.log(ev.data);//打印的是{name:&quot;明月&quot;,age:18}，这里有参数，如果没有obj就不能使用参数
-
-})
-</code></pre><p>3、移除事件：off();</p>
-<p>// div.off();移除所有事件</p>
-<p>// div.off(“click”);移除所有点击事件</p>
-<p>// div.off(“click”,fn);移除函数为fn的点击事件</p>
-<p>//用off()绑定一次性的事件，意味着只能点击一次：</p>
-<p>例如：</p>
-<p>备注：在jq事件中，所有形参的函数内部的this都是标签本身，而不是jq对象</p>
-<p> jq本身就是对标签的操作</p>
-<p> var wrap = $(“#wrap”);</p>
-<p>wrap.click(function(){</p>
-<p>// this,这里打印的是id为wrap的这个标签本身，即标签对象</p>
-<p> console.log(this);</p>
-<p>// 这里输出的就是jq对象</p>
-<p>// console.log($(this));</p>
-<p>七、遍历jquery数组、对象：</p>
-<p>备注：for in ：遍历数组、对象,遍历对象的时候，可以得到对象的所有属性名，遍历数组得到的是下标。</p>
-<p>例如：</p>
-<p> var arr = [“hello”,”how”,”are”,”you”];</p>
-<p> var obj = {name:”明月”,age:18};</p>
-<p>①for(index in arr){</p>
-<p>console.log(index);</p>
-<p>console.log(arr[index]);</p>
-<p>}</p>
-<p>②for(key in obj){</p>
-<p>console.log(key);</p>
-<p>console.log(obj[key]);</p>
-<p>}</p>
-<p>小练习：用jquery的each方法遍历对象，获取被点击的元素的下标。代码如下：</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/27/jquery初识/" data-id="cjai5ccrj0002zcerzktzioph" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-第一天" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/11/第一天/" class="article-date">
-  <time datetime="2017-09-11T08:55:52.000Z" itemprop="datePublished">2017-09-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/11/第一天/">第一天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/11/第一天/" data-id="cjai5ccrl0003zcerq4eosktj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/09/11/hello-world/" class="article-date">
-  <time datetime="2017-09-11T08:29:29.000Z" itemprop="datePublished">2017-09-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/11/hello-world/" data-id="cjai5ccrf0001zcer69vd98ar" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
